@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@300;500;600&display=swap');
+
+/* Variables */
+:root {
+    --gray-50:  #F9FAFB;
+    --gray-700: #374151;
+    --gray-900: #111928;
+
+    --pink-600: #D61F69;
+
+    --indigo-800: #42389D;
+    --indigo-900: #362F78;
+
+    --yellow-400: #E3A008;
+
+    --orange-500: #FF5A1F;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+  
+    
+}
+
+/* Brand */
+header .brand {
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+}
+
+header .brand svg {
+    width: 24px;
+}
+
+header .brand .brand-name {
+    color: var(--gray-900);
+    font-size: 2.4rem;
+}
+
+/* Navigation */
+.nav-phone.open {
+    display: initial;
+   
+}
+
+.nav-pc {
+    display: none;
+}
+
+/* Navigation Container */
+.nav-phone {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 5.2em;
+    background: white;
+    list-style-type: none;
+    overflow: hidden;
+    z-index: 2;
+    width: 100%;
+    padding: 1em 1em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.nav-phone ul li {
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Nav Items */
+.nav-phone ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--gray-700);
+    font-size: 1.6rem;
+    position: relative;
+}
+
+/* Nav Item Active */
+.nav-phone ul li a.active {
+    color: var(--gray-900);
+}
+
+/* Underline Active */
+.nav-phone ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid var(--gray-900);
+    bottom: -4px;
+}
+
+/* No Underline No Active */
+.nav-phone ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 1px;
+    border-bottom: 2px solid #626669;
+    bottom: -4px;
+    transition: width .3s;
+}
+
+.nav-phone ul li a:hover:before {
+    width: 100%;
+}
+
+
+.circle1 {
+    width: 569px;
+    height: 569px;
+    flex-shrink: 0;
+    border-radius: 569px;
+    background: var(--orange-500);
+    filter: blur(250px);
+    opacity: 0.2;
+    position: absolute;
+    transform: translate(-90%, -40%);
+    z-index: 500;
+}
+
+.circle2 {
+    width: 469px;
+    height: 469px;
+    border-radius: 469px;
+    background: var(--yellow-400);
+    filter: blur(250px);
+    opacity: 0.2;
+    transform: translate(220%, 150%);
+    position: absolute;
+    
+}
+
+/* Burger Icon */
+header .burger {
+    width: 24px;
+}
+
+/**** Main Section ****/
+
+main {
+    margin: 1em 1em;
+    display: block;
+    /* gap: 4.4em; */
+    /* grid-template-columns: 1fr 1fr; */
+    
+}
+
+/* Left */
+main .left-section {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Yellow Icon */
+main .left-section:before {
+    position: absolute;
+    content: "";
+    background: url('./assets/icon1.svg');
+    width: 58px;
+    height: 60px;
+    bottom: -7.1em;
+    right: 2em;
+    z-index: 2;
+    
+}
+
+/* Headline */
+main .left-section h1 {
+    font-weight: 600;
+    font-size: 4.2rem;
+    color: var(--gray-900);
+    margin: 0;
+}
+
+main .left-section h1 .highlight {
+    color: var(--pink-600);
+}
+
+/* Sub Headline */
+main .left-section .sub-headline {
+    font-weight: 300;
+    line-height: 150%;
+    font-size: 1.6rem;
+    color: var(--gray-700);
+    margin-top: 2em;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8em;
+    margin: 3.6rem 0;
+}
+
+.buttons .primary {
+    display: flex;
+    padding: 0.7em 2.4em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4em;
+    background: var(--indigo-800);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 0px 3px 6px 0px rgba(0, 0, 0, 0.10), 0px 10px 10px 0px rgba(0, 0, 0, 0.09), 0px 23px 14px 0px rgba(0, 0, 0, 0.05), 0px 41px 16px 0px rgba(0, 0, 0, 0.01), 0px 63px 18px 0px rgba(0, 0, 0, 0.00);
+    color: var(--gray-50);
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+/* Primary Hover Effect */
+.buttons .primary:hover {
+    background: var(--indigo-900);
+    color: white;
+}
+
+.buttons .secondary {
+    display: flex;
+    gap: 0.4em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 0.7em 0;
+    color: var(--gray-900);
+}
+
+/* Arrow Icon */
+.buttons .secondary svg {
+    width: 20px;
+    transition: transform .3s;
+}
+
+.buttons .secondary:hover svg{
+    transform: translateX(10px);
+}
+
+.buttons .secondary:hover {
+    text-decoration: underline;
+}
+
+/* Right */
+main .right-section {
+    max-height: 52.4em;
+    
+    flex-grow: 1;
+    display: grid;
+    gap: 2.4em;
+    grid-template-columns: repeat(1, auto);
+
+    grid-template-areas: "card1"
+                        "card2"
+                        "card3";
+    position: relative;
+
+}
+
+main .right-section:before {
+    position: absolute;
+    content: "";
+    background: url('./assets/icon2.svg');
+    width: 58px;
+    height: 60px;
+    top: -2.7em;
+    right: 28.5em;
+    z-index: 2;
+    
+}
+
+/* All Cards */
+.right-section .card {
+    background: var(--yellow-400);
+    border-radius: 0.8em;
+    padding: 1em;
+    display: flex;
+    align-items: end;
+    background-size: 100%;
+    transition: background-size 600ms;
+    min-height: 250px;
+}
+
+.card:hover {
+    background-size: 110%;
+}
+
+/* Card 1 */
+.right-section .card-one {
+   
+    grid-area: card1;
+    background-image: url('./assets/image1.jpg');
+    height: 25em;
+}
+
+/* Card 2 */
+.right-section .card-two {
+    
+    grid-area: card2;
+    background-image: url('./assets/image2.jpg');
+    height: 25em;
+    
+}
+
+/* Card 3 */
+.right-section .card-three {
+
+    grid-area: card3;
+    background-image: url('./assets/image3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    transition: background-size 600ms;
+}
+
+.right-section .card-three:hover {
+    background-size: 160%;
+}
+
+/* Card Details */
+.card .details {
+    border-radius: 0.4em;
+    background: rgba(255, 255, 255, 0.75);
+    padding: 1.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Details Content */
+.card .details a {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--gray-900);
+    text-decoration: none;
+}
+
+/************ Queries ************/
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 1em 1em;
+    }
+
+    main {
+        margin: 1em 1em;
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .buttons .primary, .secondary{
+        width: 100%;
+    }
+
+    
+}
+
+@media screen and (min-width: 600px) {
+
+    main .right-section {
+        
+        flex-grow: 1;
+        display: grid;
+        gap: 2.4em;
+        grid-template-columns: repeat(2, auto);
+    
+        grid-template-areas: "card1 card3"
+                            "card2 card3";
+
+    }
+
+    main .right-section .card-three{
+        background-size: 355%;
+    }
+
+    .right-section .card-three:hover {
+        background-size: 375%;
+    }
+    .nav-pc {
+        display: initial;
+    }
+
+    /* Navigation Container*/
+    .nav-pc ul {
+        list-style-type: none;
+        display: flex;
+        gap: 2em;
+        margin: 0;
+    }
+
+    .nav-phone {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+    }
+    
+    /* Nav Items */
+    .nav-pc ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--gray-700);
+        font-size: 1.6rem;
+        position: relative;
+    }
+    
+    /* Nav Item Active */
+    .nav-pc ul li a.active {
+        color: var(--gray-900);
+    }
+    
+    /* Underline Active */
+    .nav-pc ul li a.active:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        border-bottom: 2px solid var(--gray-900);
+        bottom: -4px;
+    }
+    
+    /* No Underline No Active */
+    .nav-pc ul li a:before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 1px;
+        border-bottom: 2px solid #626669;
+        bottom: -4px;
+        transition: width .3s;
+    }
+    
+    .nav-pc ul li a:hover:before {
+        width: 100%;
+    }
+
+    /* Headline */
+    main .left-section h1 {
+        font-size: 5.2rem;
+    }
+
+    /* Sub Headline */
+    main .left-section .sub-headline {
+        font-size: 1.8rem;
+    }
+}
+/* Tablets */
+@media screen and (min-width: 992px) {
+    
+    main {
+        display: flex;
+        gap: 4.4em;
+    }
+
+    main .left-section {
+        width: 45%;
+    }
+
+    header {
+        padding: 2.4em 1em;
+    }
+
+    main {
+        margin-top: 11.4em;
+    }
+
+    main .left-section {
+    
+        text-align: start;
+    }
+    main .right-section .card-three{
+        background-size: 360%;
+    }
+
+    .right-section .card-three:hover {
+        background-size: 370%;
+    }
+    main .right-section .card-one{
+        background-size: 150%;
+    }
+    main .right-section .card-one:hover{
+        background-size: 170%;
+    }
+
+    main .right-section .card-two{
+        background-size: 150%;
+    }
+    main .right-section .card-two:hover{
+        background-size: 170%;
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+}
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+    main .right-section .card-three{
+        background-size: 286%;
+    }
+
+    .right-section .card-three:hover {
+        background-size: 305%;
+    }
+
+    header {
+        padding: 2.4em 0em;
+    }
+
+    main {
+        margin: 11.4em 0 0 0;
+    }
+    
+    
+}
